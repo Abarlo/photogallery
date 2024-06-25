@@ -1,0 +1,167 @@
+body {
+    background-color: black;
+    color: white;
+    max-width: 431px;
+    min-width: 431px;
+    margin: auto;
+    font-family: "Arial", "Helvetica", sans-serif;
+}
+
+h1, #about, #gallery {
+    background-color: white;
+    color: black;
+}
+
+h1 {
+    width: calc(100% - 10px);
+    color: teal;
+    padding: 20px 5px;
+    margin-right: -10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav li {
+    flex: 0;
+    padding: 10px 5px;
+}
+
+nav a[href="#top"] {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 32px;
+    text-shadow: 4px 4px 4px black;
+    z-index: 1;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover, nav a:focus {
+    color: lightgray;
+}
+
+nav a:active {
+    color: darkgray;
+}
+
+h2 {
+    margin-top: 0;
+    padding-top: 10px;
+    text-align: center;
+}
+
+p {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+p:last-child {
+    margin-bottom: 0;
+    padding-bottom: 20px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.card {
+    position: relative;
+    padding: 5px;
+}
+
+.card-info {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.card-info.white {
+    color: white;
+}
+
+.card-info.bottom {
+    top: unset;
+    bottom: 20px;
+}
+
+#contact h2, #contact p, footer {
+    text-align: center;
+}
+
+form {
+    width: 75%;
+    margin: auto;
+}
+
+form label {
+    display: block;
+    margin-left: 5px;
+}
+
+form label:not(:first-child) {
+    margin-top: 10px;
+}
+
+form input {
+    width: 100%;
+}
+
+form input[name] {
+    height: 24px;
+}
+
+form input[name]::placeholder {
+    color: teal;
+}
+
+form input[type="submit"] {
+    display: block;
+    width: 50%;
+    height: 28px;
+    margin: 20px auto;
+    background-color: teal;
+    color: white;
+    border-radius: 8px;
+}
+
+footer {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        max-width: 862px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1330px) {
+    body {
+        max-width: 1293px;
+    }
+
+    nav ul {
+        justify-content: right;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
